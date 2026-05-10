@@ -65,7 +65,6 @@ import ContentLibrary from './pages/ContentLibrary';
 import Dashboard from './pages/Dashboard';
 import Documentation from './pages/Documentation';
 import Help from './pages/Help';
-import Home from './pages/Home';
 import InvestorProposal from './pages/InvestorProposal';
 import ManualLogin from './pages/ManualLogin';
 import MyPrompts from './pages/MyPrompts';
@@ -96,10 +95,17 @@ import Test from './pages/Test';
 import Tools from './pages/Tools';
 import VectorDatabase from './pages/VectorDatabase';
 import VoiceToPrompt from './pages/VoiceToPrompt';
+
+
+
+import Chat from './pages/Chat';
+
+
 import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
+    "Chat": Chat,
     "AIContentGenerator": AIContentGenerator,
     "AIGenerator": AIGenerator,
     "APIDocumentation": APIDocumentation,
@@ -118,7 +124,6 @@ export const PAGES = {
     "Dashboard": Dashboard,
     "Documentation": Documentation,
     "Help": Help,
-    "Home": Home,
     "InvestorProposal": InvestorProposal,
     "ManualLogin": ManualLogin,
     "MyPrompts": MyPrompts,

@@ -186,7 +186,7 @@ export default function PersonasLibrary() {
     queryKey: ['prompts'],
     queryFn: async () => {
       try {
-        const data = await apiClient.entities.Template.list();
+        const data = [];
         return Array.isArray(data) ? data : [];
       } catch (error) {
         console.error('Error fetching prompts:', error);
