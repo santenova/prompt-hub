@@ -12,9 +12,11 @@ Prompt Hub is your AI-powered workspace for creating, managing, and organizing p
 
 ### Personas
 ![Personas](personas.png)
+![Personas2](personas-2.png)
 
 ### Prompts
 ![Prompts](prompts.png)
+![Prompts 2](prompts-2.png)
 
 ### Test
 ![Test](test.png)
