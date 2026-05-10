@@ -1,0 +1,236 @@
+[
+  {
+    "user_email": "tokenfreeai@gmail.com",
+    "subscription_id": "6904e5efa6d49daae55d52bf",
+    "package_id": "6904e238fb90e917a914ea00",
+    "package_name": "Content Creator Pro",
+    "api_key": "pm_dev_4mtodaci293i5l3uxwhl5mq71tvvov8i",
+    "secret_key": "AnvHhG7SWKYG63eIHKIBOW8Gepvsi5VwPo7V5Hjkm9jfSRg2OwqRwpqqeb2AEyiz",
+    "key_name": "development Key",
+    "is_active": true,
+    "rate_limits": {
+      "requests_per_minute": 60.0,
+      "requests_per_hour": 1000.0,
+      "requests_per_day": 10000.0,
+      "requests_per_month": 100000.0
+    },
+    "usage_stats": {
+      "total_requests": 0.0,
+      "requests_today": 0.0,
+      "requests_this_month": 0.0,
+      "last_request_date": null,
+      "last_request_endpoint": null,
+      "error_count": 0.0,
+      "success_count": 0.0
+    },
+    "permissions": [
+      "read",
+      "write"
+    ],
+    "allowed_origins": [],
+    "last_used_date": null,
+    "expires_date": null,
+    "environment": "development",
+    "id": "69068b805fcd61d319c8a862",
+    "created_date": "2025-11-01T22:36:48.029000",
+    "updated_date": "2025-11-01T22:36:48.029000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "user_email": "tokenfreeai@gmail.com",
+    "subscription_id": "6904e2a9dfea9350991eee07",
+    "package_id": "6904e238fb90e917a914ea02",
+    "package_name": "Code Assistant Starter",
+    "api_key": "pm_dev_jbm0xj0z84c71xs5d8slvmsrib4gf2e2",
+    "secret_key": "FZMNRlg0LUcjcUi4ngqFwQcTpnFBhN9uY7Jsn8qu6rdpRimuE1cZmMjoxoOE4klX",
+    "key_name": "code_assistant_starter",
+    "is_active": true,
+    "rate_limits": {
+      "requests_per_minute": 10.0,
+      "requests_per_hour": 100.0,
+      "requests_per_day": 1000.0,
+      "requests_per_month": 10000.0
+    },
+    "usage_stats": {
+      "total_requests": 0.0,
+      "requests_today": 0.0,
+      "requests_this_month": 0.0,
+      "last_request_date": null,
+      "last_request_endpoint": null,
+      "error_count": 0.0,
+      "success_count": 0.0
+    },
+    "permissions": [
+      "read",
+      "write"
+    ],
+    "allowed_origins": [],
+    "last_used_date": null,
+    "expires_date": null,
+    "environment": "development",
+    "id": "69068ac3c88a6fcde1f4b14f",
+    "created_date": "2025-11-01T22:33:39.521000",
+    "updated_date": "2025-11-01T22:33:39.521000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "user_email": "tokenfreeai@gmail.com",
+    "subscription_id": "6904e2a9dfea9350991eee07",
+    "package_id": "6904e238fb90e917a914ea02",
+    "package_name": "Code Assistant Starter",
+    "api_key": "pm_live_0xto3iwocozvhx6xmscaz1dhr2k74foo",
+    "secret_key": "9eMrA2D9N2PysOYul13yOmBdtvj78QbzZh79IujHFfqLpxKDDsVnE4Zt2zKDWpje",
+    "key_name": "xxx",
+    "is_active": true,
+    "rate_limits": {
+      "requests_per_minute": 10.0,
+      "requests_per_hour": 100.0,
+      "requests_per_day": 1000.0,
+      "requests_per_month": 10000.0
+    },
+    "usage_stats": {
+      "total_requests": 0.0,
+      "requests_today": 0.0,
+      "requests_this_month": 0.0,
+      "last_request_date": null,
+      "last_request_endpoint": null,
+      "error_count": 0.0,
+      "success_count": 0.0
+    },
+    "permissions": [
+      "read",
+      "write"
+    ],
+    "allowed_origins": [],
+    "last_used_date": null,
+    "expires_date": null,
+    "environment": "production",
+    "id": "69068aa2fa8d7a0915fb579f",
+    "created_date": "2025-11-01T22:33:06.620000",
+    "updated_date": "2025-11-01T22:33:06.620000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "user_email": "santezeros@googlemail.com",
+    "subscription_id": "6904e86d89a53fd71304a172",
+    "package_id": "6904e238fb90e917a914ea02",
+    "package_name": "Code Assistant Starter",
+    "api_key": "pm_dev_dae841runqtql45oaowhcuv52urn9649",
+    "secret_key": "B3cN2PpeV1goEjRhdH76yJkxorb2Q0RXLn0DsvdujV2o7lZhW0rWHQXVJHOBC9rS",
+    "key_name": "code_assistant_starter",
+    "is_active": true,
+    "rate_limits": {
+      "requests_per_minute": 10.0,
+      "requests_per_hour": 100.0,
+      "requests_per_day": 1000.0,
+      "requests_per_month": 10000.0
+    },
+    "usage_stats": {
+      "total_requests": 0.0,
+      "requests_today": 0.0,
+      "requests_this_month": 0.0,
+      "last_request_date": null,
+      "last_request_endpoint": null,
+      "error_count": 0.0,
+      "success_count": 0.0
+    },
+    "permissions": [
+      "read",
+      "write"
+    ],
+    "allowed_origins": [],
+    "last_used_date": null,
+    "expires_date": null,
+    "environment": "development",
+    "id": "69068a2c243c0d1dadbb06cd",
+    "created_date": "2025-11-01T22:31:08.606000",
+    "updated_date": "2025-11-01T22:31:08.606000",
+    "created_by_id": "690281fc9aae86ea60af1def",
+    "created_by": "santezeros@googlemail.com",
+    "is_sample": false
+  },
+  {
+    "user_email": "tokenfreeai@gmail.com",
+    "subscription_id": "6904e5efa6d49daae55d52bf",
+    "package_id": "6904e238fb90e917a914ea00",
+    "package_name": "Content Creator Pro",
+    "api_key": "pm_live_3lmum6f1u208q5ok0rb7ffuk61ztsfpq",
+    "secret_key": "Xw8jXq4qgnCZ5Y2dFXhJumU9W7imSj8WXJMrro0GXPPba2FgweeRxNTAlRHw7Ept",
+    "key_name": "asassa",
+    "is_active": true,
+    "rate_limits": {
+      "requests_per_minute": 60.0,
+      "requests_per_hour": 1000.0,
+      "requests_per_day": 10000.0,
+      "requests_per_month": 100000.0
+    },
+    "usage_stats": {
+      "total_requests": 0.0,
+      "requests_today": 0.0,
+      "requests_this_month": 0.0,
+      "last_request_date": null,
+      "last_request_endpoint": null,
+      "error_count": 0.0,
+      "success_count": 0.0
+    },
+    "permissions": [
+      "read",
+      "write"
+    ],
+    "allowed_origins": [],
+    "last_used_date": null,
+    "expires_date": null,
+    "environment": "production",
+    "id": "690688a466de82852d6bfdd7",
+    "created_date": "2025-11-01T22:24:36.602000",
+    "updated_date": "2025-11-01T22:24:36.602000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "user_email": "tokenfreeai@gmail.com",
+    "subscription_id": "6904e2b7e33b2cf6ec926fc4",
+    "package_id": "6904e238fb90e917a914ea00",
+    "package_name": "Content Creator Pro",
+    "api_key": "pm_dev_l0vh93bltrbx22tm6eja2ofkf6q6kf7c",
+    "secret_key": "qud01h3RQJhCqXWB53M3yeAafkdt9fcXQnEqspTlaRqMgI9STGFF7FSOLQJCglvW",
+    "key_name": "Dev-API key for Content Creator Pro",
+    "is_active": true,
+    "rate_limits": {
+      "requests_per_minute": 60.0,
+      "requests_per_hour": 1000.0,
+      "requests_per_day": 10000.0,
+      "requests_per_month": 100000.0
+    },
+    "usage_stats": {
+      "total_requests": 0.0,
+      "requests_today": 0.0,
+      "requests_this_month": 0.0,
+      "last_request_date": null,
+      "last_request_endpoint": null,
+      "error_count": 0.0,
+      "success_count": 0.0
+    },
+    "permissions": [
+      "read",
+      "write"
+    ],
+    "allowed_origins": [],
+    "last_used_date": null,
+    "expires_date": null,
+    "environment": "development",
+    "id": "69068654978ab7297552c514",
+    "created_date": "2025-11-01T22:14:44.391000",
+    "updated_date": "2025-11-01T22:14:44.391000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  }
+]

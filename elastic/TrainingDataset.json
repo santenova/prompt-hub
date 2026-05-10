@@ -1,0 +1,94 @@
+[
+  {
+    "user_email": "user@example.com",
+    "subscription_id": "sub_456",
+    "package_id": "pkg_content_writer",
+    "dataset_name": "Blog Posts Dataset",
+    "description": "Collection of 2000 high-quality blog posts for content generation training",
+    "file_url": "https://example.com/datasets/blog_posts.csv",
+    "file_type": "csv",
+    "file_size": 8945632.0,
+    "row_count": 2000.0,
+    "column_names": [
+      "title",
+      "content",
+      "category",
+      "tags"
+    ],
+    "status": "ready",
+    "processing_error": null,
+    "validation_results": {
+      "is_valid": true,
+      "issues": [],
+      "suggestions": [
+        "Well-structured dataset",
+        "Good variety of topics"
+      ]
+    },
+    "sample_data": [
+      {
+        "title": "10 Tips for Remote Work",
+        "content": "Working remotely has become...",
+        "category": "Productivity",
+        "tags": "remote,work,tips"
+      }
+    ],
+    "metadata": {
+      "source": "public_blogs",
+      "quality_score": 0.92
+    },
+    "is_public": false,
+    "id": "6918bd7a0eaa271a77786862",
+    "created_date": "2025-11-15T17:50:50.248000",
+    "updated_date": "2025-11-15T17:50:50.248000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "user_email": "user@example.com",
+    "subscription_id": "sub_123",
+    "package_id": "pkg_code_assistant",
+    "dataset_name": "Customer Support Conversations",
+    "description": "Training data for customer support chatbot - 5000 conversations with solutions",
+    "file_url": "https://example.com/datasets/support_conversations.jsonl",
+    "file_type": "jsonl",
+    "file_size": 2458624.0,
+    "row_count": 5000.0,
+    "column_names": [
+      "input",
+      "context",
+      "output"
+    ],
+    "status": "ready",
+    "processing_error": null,
+    "validation_results": {
+      "is_valid": true,
+      "issues": [],
+      "suggestions": [
+        "Consider adding more edge cases",
+        "Dataset covers main use cases well"
+      ]
+    },
+    "sample_data": [
+      {
+        "input": "How do I reset my password?",
+        "context": "User account management",
+        "output": "To reset your password, click on 'Forgot Password' on the login page..."
+      },
+      {
+        "input": "Where is my order?",
+        "context": "Order tracking",
+        "output": "You can track your order by going to Orders section..."
+      }
+    ],
+    "metadata": {},
+    "is_public": false,
+    "id": "6918bd7a0eaa271a77786861",
+    "created_date": "2025-11-15T17:50:50.247000",
+    "updated_date": "2025-11-15T17:50:50.247000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  }
+]

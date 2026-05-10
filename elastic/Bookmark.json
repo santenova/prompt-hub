@@ -1,0 +1,61 @@
+[
+  {
+    "user_email": "user@example.com",
+    "item_type": "persona",
+    "item_id": "persona_marketing",
+    "item_title": "Marketing Specialist Persona",
+    "collection": "Marketing Tools",
+    "tags": [
+      "marketing",
+      "social media"
+    ],
+    "notes": "Great for social media campaigns",
+    "priority": "medium",
+    "is_favorite": false,
+    "last_accessed": null,
+    "access_count": 2.0,
+    "reminder_date": null,
+    "metadata": {
+      "category": "Marketing",
+      "author": null,
+      "thumbnail": null,
+      "rating": null
+    },
+    "id": "6918bb6a3565230809c5edd6",
+    "created_date": "2025-11-15T17:42:02.528000",
+    "updated_date": "2025-11-15T17:42:02.528000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "user_email": "user@example.com",
+    "item_type": "template",
+    "item_id": "template_blog_post",
+    "item_title": "Professional Blog Post Template",
+    "collection": "Content Creation",
+    "tags": [
+      "writing",
+      "blog",
+      "content"
+    ],
+    "notes": "Use this for technical blog posts about software development",
+    "priority": "high",
+    "is_favorite": true,
+    "last_accessed": null,
+    "access_count": 5.0,
+    "reminder_date": null,
+    "metadata": {
+      "category": "Writing",
+      "author": null,
+      "thumbnail": null,
+      "rating": 4.5
+    },
+    "id": "6918bb6a3565230809c5edd5",
+    "created_date": "2025-11-15T17:42:02.528000",
+    "updated_date": "2025-11-15T17:42:02.528000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  }
+]

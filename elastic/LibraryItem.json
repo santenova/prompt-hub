@@ -1,0 +1,93 @@
+[
+  {
+    "platform_or_style": null,
+    "type": "hook",
+    "title": "Elevate your business with AI workflows from Promp",
+    "source_module": "Hook Generator",
+    "content": "{\"text\":\"Elevate your business with AI workflows from Prompt Hub - the future of content creation is here! 🌟\",\"hook_type\":\"Promise/Excitement\",\"strategy\":\"Creates excitement by positioning the platform as a cutting-edge solution for businesses\"}",
+    "id": "699f25ebd6f4e5f53c114343",
+    "created_date": "2026-02-25T16:40:11.285000",
+    "updated_date": "2026-02-25T16:40:11.285000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "type": "newsletter",
+    "platform_or_style": null,
+    "content": "{\"item_number\":27,\"title\":\"Creating a Vision for Your Network\",\"description\":\"Define a strategic vision for your professional network to maximize opportunities and connections.\",\"emoji\":\"🔮\"}",
+    "source_module": "Newsletter Generator",
+    "title": "Creating a Vision for Your Network",
+    "id": "69894b333febecf42e10a4e2",
+    "created_date": "2026-02-09T02:49:23.918000",
+    "updated_date": "2026-02-09T02:49:23.918000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "type": "newsletter",
+    "platform_or_style": null,
+    "content": "{\"item_number\":25,\"title\":\"Preparing for Remote Work\",\"description\":\"Get tips on adapting to remote work, including setup and maintaining productivity in a home environment.\",\"emoji\":\"🏡\"}",
+    "source_module": "Newsletter Generator",
+    "title": "Preparing for Remote Work",
+    "id": "698949b9b6208c1c52537b7c",
+    "created_date": "2026-02-09T02:43:05.283000",
+    "updated_date": "2026-02-09T02:43:05.283000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "type": "newsletter",
+    "platform_or_style": null,
+    "content": "{\"item_number\":25,\"title\":\"Professional Certifications: Are They Worth It? 🏆\",\"description\":\"Explore the value of professional certifications in enhancing your career prospects and skill set.\",\"emoji\":\"🏆\"}",
+    "source_module": "Newsletter Generator",
+    "title": "Professional Certifications: Are They Worth It? 🏆",
+    "id": "69894513765e266130c0fafb",
+    "created_date": "2026-02-09T02:23:15.128000",
+    "updated_date": "2026-02-09T02:23:15.128000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "type": "newsletter",
+    "platform_or_style": null,
+    "content": "{\"item_number\":23,\"title\":\"🎉 Exclusive Webinar: Mastering Content Creation with Prompt Hub 🎓\",\"description\":\"Join our webinar to learn how to make the most of our AI platform for content creation.\",\"emoji\":\"🎓\"}",
+    "source_module": "Newsletter Generator",
+    "title": "🎉 Exclusive Webinar: Mastering Content Creation with Prompt Hub 🎓",
+    "id": "6989434a071583b4ad32b3f5",
+    "created_date": "2026-02-09T02:15:38.271000",
+    "updated_date": "2026-02-09T02:15:38.271000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "platform_or_style": null,
+    "type": "newsletter",
+    "title": "Revolutionize Your AI Content Creation 🚀",
+    "source_module": "Newsletter Generator",
+    "content": "{\"title\":\"Revolutionize Your AI Content Creation 🚀\",\"description\":\"Learn how Prompt Hub's powerful AI workflows can help you create exceptional content 10x faster!\",\"emoji\":\"🚀\",\"scheduled_date\":\"2023-03-15\"}",
+    "id": "697db0aa18402bcdcee22f3a",
+    "created_date": "2026-01-31T07:35:06.288000",
+    "updated_date": "2026-01-31T07:35:06.288000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "type": "collaboration",
+    "platform_or_style": null,
+    "content": "{\"name\":\"AI_EmailAnalyst_Charlie\",\"niche\":\"Data Analysis\",\"match_reason\":\"Experienced in using data to make informed decisions and optimize email strategies.\",\"collab_idea\":\"Collaborating on developing AI algorithms that can analyze user behavior and provide actionable insights for better email performance.\",\"audience_size\":\"10,000 - 25,000\"}",
+    "source_module": "Collab Matchmaker",
+    "title": "AI_EmailAnalyst_Charlie",
+    "id": "6977dec22b0131f7133f4fce",
+    "created_date": "2026-01-26T21:38:10.570000",
+    "updated_date": "2026-01-26T21:38:10.570000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  }
+]

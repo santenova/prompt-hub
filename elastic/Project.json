@@ -1,0 +1,525 @@
+[
+  {
+    "name": " Satellite based Autonomous AI Network for Near-Solar Activity Detection .",
+    "description": "",
+    "about": "",
+    "vision": "",
+    "mission": "",
+    "usps": [
+      "Use of cutting-edge AI technology for unprecedented near-solar detection accuracy.",
+      "Real-time data transmission facilitating immediate analysis and response.",
+      "Autonomy in operation reduces reliance on ground-based control, enhancing flexibility and response times.",
+      "Dedicated to safely monitoring solar activity to protect both terrestrial and space assets.",
+      "Comprehensive analytics capabilities providing valuable insights to various industries including telecommunications and climate science."
+    ],
+    "topic": "",
+    "tone": "Professional",
+    "style": "Informative",
+    "target_audience": "The primary target audience includes government space agencies, research institutions, and private aerospace companies focused on solar and space weather research. Additionally, climate scientists and satellite communication firms can also benefit from the insights provided by this technology.",
+    "audience_segments": [],
+    "primary_goal": "",
+    "keywords": "",
+    "exclude_words": "",
+    "additional_context": "",
+    "features": [
+      "Visualization tools for data interpretation to enable stakeholders to easily understand satellite data trends.",
+      "Mobile application for monitoring solar activity on-the-go to enhance accessibility and responsiveness.",
+      "Collaboration features allowing users to share insights and data with colleagues in real-time.",
+      "Scalability options to expand the service to additional satellites or regions as demand increases.",
+      "User customization settings to tailor notifications and analytics to individual research needs."
+    ],
+    "benefits": [],
+    "use_cases": [],
+    "links": [],
+    "technology_stack": [],
+    "ai_models": [],
+    "market_position": "\"As a leading provider of autonomous AI solutions for near-solar activity detection, we bridge the gap between traditional space monitoring and innovative, real-time analytics, positioning ourselves at the forefront of space technology for climate and safety research.\"",
+    "competitive_advantages": [],
+    "revenue_model": "",
+    "pricing_tiers": [],
+    "roadmap": [],
+    "metrics": {
+      "users": null,
+      "growth_rate": null,
+      "retention": null,
+      "revenue": null
+    },
+    "platforms": [],
+    "brand_colors": {
+      "primary": null,
+      "secondary": null,
+      "accent": null
+    },
+    "is_active": true,
+    "linked_template_ids": [],
+    "id": "698a1fe72cff35148cb29dca",
+    "created_date": "2026-02-09T17:56:55.951000",
+    "updated_date": "2026-02-09T18:00:15.046000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "name": "Only-Agent Marketplace",
+    "description": "\nhttps://only-agent.ai is a revolutionary AI marketplace ecosystem designed for the era of data sovereignty and privacy-first computing. Unlike traditional cloud-based AI platforms (OpenAI, Anthropic, etc.), we serve multiple customer segments through a unified platform:\n\nPublic Marketplace: Individuals and small businesses access curated AI agents and services\nEnterprise White-Label (local-agent.ai): Companies deploy private, branded AI marketplaces on their own infrastructure\nThird-Party Vendors: Service providers organize their existing AI offerings into a unified marketplace\nCustom Business Solutions: Tailored deployments for organizations with specific requirements\nOur platform addresses a critical market gap: over €140B+ of enterprises that are legally, ethically, or strategically prohibited from using cloud-based AI services. Healthcare organizations bound by patient privacy laws, financial institutions handling sensitive data, government agencies requiring sovereign technology, and European companies navigating GDPR—all desperately need AI capabilities but cannot risk their data leaving their control.\n\nWe monetize through a multi-tier commission model (0-20%) from marketplace vendors, direct product sales, enterprise licensing for white-label deployments (local-agent.ai), and optional managed services. With zero marginal infrastructure costs and software-level margins, we're positioned to capture massive value across multiple customer segments simultaneously.",
+    "about": null,
+    "vision": null,
+    "mission": null,
+    "usps": [],
+    "topic": "AI Marketplace",
+    "tone": "Professional",
+    "style": "Informative",
+    "target_audience": "",
+    "audience_segments": [],
+    "primary_goal": null,
+    "keywords": "Agents, Services",
+    "exclude_words": "",
+    "additional_context": null,
+    "features": [],
+    "benefits": [],
+    "use_cases": [],
+    "links": [],
+    "technology_stack": [],
+    "ai_models": [],
+    "market_position": null,
+    "competitive_advantages": [],
+    "revenue_model": null,
+    "pricing_tiers": [],
+    "roadmap": [],
+    "metrics": {
+      "users": null,
+      "growth_rate": null,
+      "retention": null,
+      "revenue": null
+    },
+    "platforms": [],
+    "brand_colors": {
+      "primary": null,
+      "secondary": null,
+      "accent": null
+    },
+    "is_active": true,
+    "linked_template_ids": [],
+    "id": "69853e2e464afb8114f02666",
+    "created_date": "2026-02-06T01:04:46.273000",
+    "updated_date": "2026-02-09T03:31:07.593000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "name": "UFO PILOT",
+    "description": "Endless arcade shooter fly your craft against the enemy ",
+    "about": "",
+    "vision": "To be the ultimate arcade shooting experience that captivates players with stunning visuals, addictive gameplay, and a vibrant community of gamers worldwide.",
+    "mission": "To create a thrilling arcade shooter that offers endless entertainment through innovative gameplay, stunning graphics, and exceptional player customization options.",
+    "usps": [
+      "Fast-paced gameplay for adrenaline junkies",
+      "Vibrant neon graphics that enhance the arcade experience",
+      "Customizable characters and weapons for player personalization",
+      "Endless levels that evolve with player skill",
+      "Dynamic soundtracks that match the gameplay intensity",
+      "Adrenaline-packed multiplayer modes that enhance competitive play against friends and global players.",
+      "Stunning neon graphics coupled with a unique art style, immersing players in an unforgettable arcade atmosphere.",
+      "Robust character customization options with unlockable skins and power-ups ensuring every player can create their unique avatar.",
+      "An evolving gameplay experience that introduces progressive challenges to keep players engaged for hours.",
+      "Signature soundscapes that immerse players in the game's intense atmosphere, enhancing the overall experience."
+    ],
+    "topic": "Neon Run",
+    "tone": "Energetic, inviting, and competitive, with a focus on community and excitement.",
+    "style": "Dynamic and bold visual design complemented by vivid language that reflects the thrilling nature of the game. Emphasize inclusivity and community-building in all communications.",
+    "target_audience": "Target audience includes casual and hardcore gamers aged 16-35, predominantly male, but inclusive of female players who enjoy competitive and fast-paced arcade shooters. This audience is characterized by an affinity for vibrant graphics, depth in gameplay mechanics, and community engagement through competitive play. Psychographically, they are thrill-seekers who enjoy immersive gaming experiences and are active on gaming forums and social media platforms.",
+    "audience_segments": [],
+    "primary_goal": "",
+    "keywords": "",
+    "exclude_words": "",
+    "additional_context": "",
+    "features": [
+      "Leaderboard integration for competitive ranking and player statistics.",
+      "Augmented reality (AR) capabilities to enhance real-world interactions with the game.",
+      "Seasonal themes and events to keep content fresh and engaging throughout the year.",
+      "Incorporate social sharing features to allow players to showcase achievements and customize their avatars on social media.",
+      "Introduce AR mini-games that encourage players to interact with their environment in innovative ways.",
+      "Implement a progression system that rewards players with unlockable content based on their play time and achievements."
+    ],
+    "benefits": [],
+    "use_cases": [],
+    "links": [],
+    "technology_stack": [],
+    "ai_models": [],
+    "market_position": "",
+    "competitive_advantages": [],
+    "revenue_model": "",
+    "pricing_tiers": [],
+    "roadmap": [],
+    "metrics": {
+      "users": null,
+      "growth_rate": null,
+      "retention": null,
+      "revenue": null
+    },
+    "platforms": [],
+    "brand_colors": {
+      "primary": null,
+      "secondary": null,
+      "accent": null
+    },
+    "is_active": true,
+    "linked_template_ids": [],
+    "id": "6984f0371bf3a9ad6162d381",
+    "created_date": "2026-02-05T19:32:07.080000",
+    "updated_date": "2026-02-07T15:33:24.783000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "name": "Enterprise LLM Benchmark - Professional",
+    "description": "**Summary:**\n\n1. **Model Evaluation Processes** used to assess model effectiveness.\n\n   - **Dataset Split:** Models are tested on unseen holdout data for offline e\n   - **Quantitative Metrics:** Key performance indicators (KPIs) like accuracy, precision, recall, F1 score, and AUC-ROC arevaluation to prevent overfitting and on live real-world data for online evaluation in production.\n   - **Qualitative Assessments:** Human review helps determine trustworthiness and safety.\n   - **Robustness Testing:** Tests include bias, drift detection, adversarial testing, and reliability under various scenarios.\n   - **Contextual Evaluation:** For AI agents and LLMs, this involves auditing behavior, identifying failure points, and ensuring the model meets defined success criteria.\n\n2. **Model Authorization and Governance**\n\n   - **Authorization:** Formal approval stage ensuring models meet organizational or legal standards.\n   - **Regulatory Compliance:** Under frameworks like the EU AI Act, providers must ensure compliance with strict standards (e.g., registration in an EU database before deployment).\n   - **Risk Management:** For General Purpose AI (GPAI), providers must conduct evaluations and document risks to identify and mitigate them.\n   - **Stakeholder Approval:** Demonstrating model value, technical soundness, and safety is required for stakeholder approval.\n   - **Documentation:** Collecting evidence of performance, fairness, and limitations facilitates audits and ensures transparency.\n\n3. **Key Components in the Lifecycle Model Evaluation Pipeline**\n\n   - **Automated Process:** Generates metrics, compares models, and evaluates against a \"ground truth\" dataset .\n   - **Continuous Monitoring:** Post-deployment evaluation to monitor performance drift or changes in data inputs.\n   - **Specialized Evaluation:** Includes assessing tripple validation questions\n   ",
+    "about": "a https://code-agent.ai product",
+    "vision": "To transform the future of AI through the world’s most insightful and user-friendly benchmarking platform, empowering organizations across sectors to evaluate AI models with confidence and precision.",
+    "mission": "To provide cutting-edge benchmarking solutions that empower organizations to efficiently evaluate, compare, and enhance AI language models for impactful business outcomes.",
+    "usps": [
+      "Comprehensive model comparison with detailed analytics to empower informed decision making.",
+      "Real-time benchmarking and performance tracking to ensure optimal model selection for specific use cases.",
+      "Seamless integration with communication tools like Slack to ensure collaboration and updates in real-time.",
+      "Custom test case generation using AI to reduce manual effort and increase testing efficiency.",
+      "Robust cost analysis tools to help businesses manage and optimize model usage expenses effectively.",
+      "Empower informed decision-making with the most detailed AI benchmarking insights available.",
+      "Streamline AI model evaluation processes with real-time performance tracking tailored to your use cases.",
+      "Enhance collaboration effortlessly with integrated Slack notifications, keeping teams updated on model performances.",
+      "Maximize your testing efficiency with AI-driven custom test case generation designed for user needs.",
+      "Leverage advanced cost analysis tools that not only track expenses but also provide actionable insights for optimization.",
+      "Real-time AI benchmarking insights to facilitate rapid decision-making and action.",
+      "AI-driven custom test case generation that saves time and maximizes testing relevance.",
+      "Seamless integration with collaboration tools like Slack, enhancing team communication and efficiency.",
+      "In-depth cost analysis and reporting tools that optimize spending on AI resources.",
+      "Intuitive advanced visualization features providing clear insights into model performance metrics."
+    ],
+    "topic": "Enterprise LLM Benchmark - Professional",
+    "tone": "",
+    "style": "Direct, Clear, and Educational. Focus on providing valuable insights that empower users to make informed decisions while maintaining an approachable voice.",
+    "target_audience": "The target audience comprises AI practitioners, data scientists, and decision-makers within organizations focused on AI technologies. Key sectors include Technology (startups and enterprises), Finance (banks and fintech), Healthcare (medical institutions and AI research), and Academia (universities and research institutions). Demographics include individuals aged 25-50 with advanced degrees; psychographics involve a strong interest in data-driven decision-making and a desire for optimization of AI projects. Pain points include inefficient model evaluation processes, inability to track performance in real-time, and high costs associated with model management.",
+    "audience_segments": [],
+    "primary_goal": "Subscriptions",
+    "keywords": "LLM testing",
+    "exclude_words": "",
+    "additional_context": "",
+    "features": [
+      "User-generated content feature for sharing best practices and test cases within the community.",
+      "Advanced visualization tools for interpreting performance metrics comprehensively.",
+      "Collaboration tools for teams to work together on benchmarking projects without silos.",
+      "Tutorials and webinars to educate users on maximizing the platform's potential.",
+      "Automated performance reporting feature that schedules and sends updates to users.",
+      "Community-driven insights platform where users can share data and techniques to enhance model evaluation.",
+      "Automated benchmarking notifications that alert users of performance changes or anomalies in their models.",
+      "Integration with other AI tools and platforms for a holistic workflow approach to AI management.",
+      "A mobile dashboard for on-the-go monitoring of model performance and alerts.",
+      "Gamified learning modules to help users quickly grasp and apply benchmarking strategies effectively."
+    ],
+    "benefits": [],
+    "use_cases": [],
+    "links": [],
+    "technology_stack": [],
+    "ai_models": [],
+    "market_position": "Positioned as the premier AI benchmarking platform that combines real-time analytics, cost optimization, and AI-driven insights, catering specifically to organizations that rely on language model performance.",
+    "competitive_advantages": [],
+    "revenue_model": "Monthly reaccuring  subscription ",
+    "pricing_tiers": [],
+    "roadmap": [],
+    "metrics": {
+      "users": null,
+      "growth_rate": null,
+      "retention": null,
+      "revenue": null
+    },
+    "platforms": [],
+    "brand_colors": {
+      "primary": null,
+      "secondary": null,
+      "accent": null
+    },
+    "is_active": true,
+    "linked_template_ids": [],
+    "id": "6982205b578bd1ccd70d384d",
+    "created_date": "2026-02-03T16:20:43.422000",
+    "updated_date": "2026-02-09T03:56:08.005000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "benefits": [
+      {
+        "title": "10x Faster Content Creation",
+        "description": "Reduce content creation time from hours to minutes with AI-powered automation"
+      },
+      {
+        "title": "Consistent Quality & Brand Voice",
+        "description": "Maintain quality standards and brand consistency across all content using personas and templates"
+      },
+      {
+        "title": "Scale Effortlessly",
+        "description": "Generate hundreds of content variations without compromising on quality or creativity"
+      },
+      {
+        "title": "Intelligent Optimization",
+        "description": "Built-in SEO analysis, readability scoring, and AI-powered suggestions for improvement"
+      },
+      {
+        "title": "Complete Data Control",
+        "description": "Local Ollama support, custom model training, and infrastructure control ensure data privacy"
+      },
+      {
+        "title": "Professional Results",
+        "description": "Enterprise-grade content that rivals human-written copy in quality and engagement"
+      }
+    ],
+    "audience_segments": [
+      {
+        "name": "Content Marketers",
+        "description": "Create blog posts, articles, and thought leadership content at scale",
+        "pain_points": [
+          "Time-consuming content creation",
+          "Maintaining consistent quality",
+          "Scaling content production"
+        ],
+        "market_size": "Large"
+      },
+      {
+        "name": "Business Owners",
+        "description": "Generate marketing materials, product descriptions, and sales copy",
+        "pain_points": [
+          "Limited marketing resources",
+          "Expensive copywriting services",
+          "Inconsistent brand voice"
+        ],
+        "market_size": "Medium"
+      },
+      {
+        "name": "Social Media Managers",
+        "description": "Produce engaging posts, captions, and content calendars",
+        "pain_points": [
+          "Daily content demands",
+          "Platform-specific optimization",
+          "Engagement rates"
+        ],
+        "market_size": "Large"
+      },
+      {
+        "name": "Marketing Teams",
+        "description": "In-house marketing departments coordinating campaigns",
+        "pain_points": [
+          "Brand consistency across channels",
+          "Campaign optimization",
+          "Team coordination and version control"
+        ],
+        "market_size": "Medium to large"
+      },
+      {
+        "name": "Agencies",
+        "description": "Manage multiple client voices and brand guidelines efficiently",
+        "pain_points": [
+          "Multiple client brands",
+          "Consistency across teams",
+          "Scalability and resource constraints"
+        ],
+        "market_size": "High-value"
+      },
+      {
+        "name": "Enterprises",
+        "description": "Large organizations with complex content and security needs",
+        "pain_points": [
+          "Data security and privacy",
+          "Workflow automation",
+          "API integration and custom infrastructure"
+        ],
+        "market_size": "High value, growing"
+      }
+    ],
+    "tone": "Professional, helpful, innovative, friendly",
+    "keywords": "AI, prompts, personas, content generation, automation, templates, creativity, efficiency, privacy, Ollama, local AI, voice profiles, collaboration, optimization, marketing",
+    "market_position": "The leading AI content creation platform that prioritizes data privacy, user control, and creative expression while providing enterprise-grade tools for professional content generation at scale",
+    "about": "Prompt Hub is a comprehensive AI content creation platform that combines prompt engineering, persona management, voice-to-prompt transcription, and collaborative tools to help individuals and teams create professional content at scale. It prioritizes user data privacy with local Ollama support while providing enterprise-grade content creation capabilities. The platform addresses key EU enterprise concerns about AI: expertise gap (70.89%), legal clarity (52.52%), and data privacy (48.83%).",
+    "description": "AI-powered prompt management and content generation platform with advanced collaboration, optimization, and local AI control",
+    "roadmap": [],
+    "additional_context": null,
+    "use_cases": [
+      {
+        "title": "Create & Test Marketing Copy",
+        "description": "Generate base copy, create 5 A/B variations, test different tones, save and deploy winning version"
+      },
+      {
+        "title": "Build Branded Content at Scale",
+        "description": "Upload brand guide, define brand voice with personas, create templates, collaborate with team"
+      },
+      {
+        "title": "Data-Driven Content Strategy",
+        "description": "Fetch market trends via API, generate content, enrich with insights, export optimized version"
+      },
+      {
+        "title": "Enterprise AI Workflow Automation",
+        "description": "Connect data sources, create automated chains, add smart routing, deploy on your infrastructure"
+      },
+      {
+        "title": "Team Collaboration & Publishing",
+        "description": "Start with template, invite collaborators, edit together, track changes, publish seamlessly"
+      },
+      {
+        "title": "Social Media Content Calendar",
+        "description": "Generate monthly content plans, create platform-specific variations, schedule and publish"
+      },
+      {
+        "title": "Multi-Client Agency Management",
+        "description": "Manage multiple brand voices, maintain client guidelines, scale team productivity"
+      }
+    ],
+    "revenue_model": "Freemium SaaS with premium tiers for advanced features, team collaboration, and enterprise support",
+    "platforms": [
+      "Web (fully responsive)",
+      "Desktop browsers",
+      "Mobile-optimized",
+      "Progressive Web App"
+    ],
+    "brand_colors": {
+      "secondary": "indigo",
+      "accent": "pink",
+      "primary": "purple"
+    },
+    "features": [
+      "AI Prompt Generator - Create prompts from description",
+      "Advanced AI Studio - A/B testing and document upload",
+      "Prompt Library - 100+ templates with folders and tags",
+      "Newsletter Generator - 31-item monthly content plans",
+      "Persona Library - Custom personas with voice profiles and families",
+      "Voice to Prompt - Transcribe and refine spoken ideas in real-time",
+      "Real-Time Collaboration - Live editing with presence indicators",
+      "Version History - Track changes and restore previous versions",
+      "Share & Permissions - Public sharing with permission levels",
+      "A/B Variations Generator - Create and test multiple versions",
+      "AI Tone Adjustment - 9 tone options for audience targeting",
+      "Team Insights AI - Performance analysis and improvement suggestions",
+      "Document Upload - PDF, DOCX, TXT support for context",
+      "Live Data Integration - Social trends and market research",
+      "Workflow & API Chains - Automated AI workflows with conditional logic",
+      "API Configuration Manager - Secure auth storage and management",
+      "Reusable Workflows - Save and share workflow templates",
+      "Local AI with Ollama - Run models on your infrastructure",
+      "Custom Model Training - Fine-tune models for your specific needs",
+      "SEO Analysis - Built-in optimization and readability scoring",
+      "Content Examples - 21+ real-world examples across industries",
+      "Documentation - Comprehensive guides and tutorials"
+    ],
+    "usps": [
+      "Real-time voice-to-prompt transcription with AI refinement",
+      "Comprehensive template and persona library with 100+ templates",
+      "Advanced A/B testing and tone adjustment for content optimization",
+      "Real-time collaborative editing with presence indicators and version history",
+      "Enterprise AI control with local Ollama integration and custom model training",
+      "Document upload and live data integration for context-aware generation",
+      "Newsletter generator for automated 31-item monthly content planning",
+      "Multi-AI provider support (OpenAI, Anthropic, local Ollama)",
+      "Professional results rivaling human-written copy in quality and engagement"
+    ],
+    "exclude_words": null,
+    "links": [],
+    "pricing_tiers": [
+      {
+        "name": "Free",
+        "features": [
+          "Basic prompt generation",
+          "100+ templates",
+          "Personal use only",
+          "Basic persona creation"
+        ],
+        "price": "$0"
+      },
+      {
+        "name": "Pro",
+        "features": [
+          "Unlimited generations",
+          "Advanced A/B testing",
+          "Team collaboration (3 users)",
+          "Voice to Prompt",
+          "Priority support"
+        ],
+        "price": "$29/month"
+      },
+      {
+        "name": "Enterprise",
+        "features": [
+          "Unlimited everything",
+          "Local Ollama deployment",
+          "Custom integrations",
+          "Dedicated support",
+          "Advanced security"
+        ],
+        "price": "Custom"
+      }
+    ],
+    "primary_goal": "Enable users to create professional, on-brand content 10x faster with AI assistance while maintaining complete data privacy and control",
+    "is_active": true,
+    "ai_models": [
+      "GPT-4o-mini (via OpenAI)",
+      "Claude (via Anthropic)",
+      "Ollama local models",
+      "Custom fine-tuned models"
+    ],
+    "target_audience": "Content creators, marketing professionals, business owners, agencies, social media managers, enterprises",
+    "competitive_advantages": [
+      {
+        "title": "Multi-Model Support & Privacy",
+        "description": "Support for multiple AI providers and local Ollama deployment gives users complete control and data privacy"
+      },
+      {
+        "title": "Voice-First Approach",
+        "description": "Unique voice-to-prompt transcription with real-time refinement for natural idea capture"
+      },
+      {
+        "title": "Real-Time Collaboration",
+        "description": "Live editing with presence indicators, version history, and team permissions"
+      },
+      {
+        "title": "Enterprise Control",
+        "description": "Full infrastructure control with Ollama, custom model training, and API integrations"
+      },
+      {
+        "title": "Comprehensive Feature Set",
+        "description": "20+ tools covering entire content creation workflow from ideation to optimization"
+      },
+      {
+        "title": "Privacy & Legal Compliance",
+        "description": "Addresses key enterprise concerns: expertise (70.89%), legal clarity (52.52%), data protection (48.83%)"
+      }
+    ],
+    "vision": "To democratize AI-powered content creation by providing intuitive tools that enable anyone to create high-quality, on-brand content without technical expertise, while maintaining complete control over their data and AI infrastructure.",
+    "mission": "Empower creators, marketing teams, and enterprises with AI tools that enhance productivity, ensure brand consistency, enable data-driven content optimization, and prioritize data privacy and local control.",
+    "technology_stack": [
+      "React 18",
+      "Tailwind CSS",
+      "TypeScript",
+      "Base44 Backend as a Service",
+      "Deno Deploy",
+      "Ollama",
+      "Framer Motion",
+      "Recharts",
+      "Radix UI",
+      "@tanstack/react-query"
+    ],
+    "name": "Prompt Hub",
+    "topic": "AI-powered content creation, prompt engineering, and intelligent automation",
+    "style": "Modern, accessible, technical yet approachable",
+    "metrics": {
+      "revenue": "Recurring revenue from Pro and Enterprise tiers",
+      "growth_rate": "Strong adoption in content and marketing sectors",
+      "users": "Growing user base across creators and enterprises",
+      "retention": "High engagement with multi-tool usage"
+    },
+    "id": "697defce6118f7db732b75eb",
+    "created_date": "2026-01-31T12:04:30.111000",
+    "updated_date": "2026-01-31T12:04:30.111000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "name": "x",
+    "description": "",
+    "settings": {
+      "chunk_size": 500.0,
+      "chunk_overlap": 50.0,
+      "similarity_threshold": 0.7,
+      "max_results": 5.0
+    },
+    "document_count": 0,
+    "is_active": true,
+    "color": "purple",
+    "tags": [],
+    "id": "6962ac36f8e3eee9cda76c9b",
+    "created_date": "2026-01-10T19:44:54.428000",
+    "updated_date": "2026-01-10T19:44:54.428000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "name": "x",
+    "description": "",
+    "settings": {
+      "chunk_size": 500.0,
+      "chunk_overlap": 50.0,
+      "similarity_threshold": 0.7,
+      "max_results": 5.0
+    },
+    "document_count": 0,
+    "is_active": true,
+    "color": "purple",
+    "tags": [],
+    "id": "6962ac2809b3d66847dc6bb9",
+    "created_date": "2026-01-10T19:44:40.008000",
+    "updated_date": "2026-01-10T19:44:40.009000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "name": "x",
+    "description": "",
+    "settings": {
+      "chunk_size": 500.0,
+      "chunk_overlap": 50.0,
+      "similarity_threshold": 0.7,
+      "max_results": 5.0
+    },
+    "document_count": 0,
+    "is_active": true,
+    "color": "purple",
+    "tags": [],
+    "id": "6962ac27f6161acd774fffda",
+    "created_date": "2026-01-10T19:44:39.693000",
+    "updated_date": "2026-01-10T19:44:39.693000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "name": "x",
+    "description": "",
+    "settings": {
+      "chunk_size": 500.0,
+      "chunk_overlap": 50.0,
+      "similarity_threshold": 0.7,
+      "max_results": 5.0
+    },
+    "document_count": 0,
+    "is_active": true,
+    "color": "purple",
+    "tags": [],
+    "id": "6962ac19c58aecbfa1fa7189",
+    "created_date": "2026-01-10T19:44:25.453000",
+    "updated_date": "2026-01-10T19:44:25.453000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "name": "kb-001-santex",
+    "description": "",
+    "settings": {
+      "chunk_size": 500.0,
+      "chunk_overlap": 50.0,
+      "similarity_threshold": 0.7,
+      "max_results": 5.0
+    },
+    "document_count": 0,
+    "is_active": true,
+    "color": "purple",
+    "tags": [],
+    "id": "695ceef3f2d983b6cd6f83b7",
+    "created_date": "2026-01-06T11:16:03.202000",
+    "updated_date": "2026-01-06T11:16:03.202000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "name": "kb-001-santex",
+    "description": "",
+    "settings": {
+      "chunk_size": 500.0,
+      "chunk_overlap": 50.0,
+      "similarity_threshold": 0.7,
+      "max_results": 5.0
+    },
+    "document_count": 0,
+    "is_active": true,
+    "color": "purple",
+    "tags": [],
+    "id": "695ceef159bc6aee7e6e5375",
+    "created_date": "2026-01-06T11:16:01.915000",
+    "updated_date": "2026-01-06T11:16:01.915000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "name": "VECTORIZED-PROJECT",
+    "description": "",
+    "settings": {
+      "chunk_size": 500.0,
+      "chunk_overlap": 50.0,
+      "similarity_threshold": 0.7,
+      "max_results": 5.0
+    },
+    "document_count": 0,
+    "is_active": true,
+    "color": "purple",
+    "tags": [],
+    "id": "695bda56f5846727e8bb3b1f",
+    "created_date": "2026-01-05T15:35:50.130000",
+    "updated_date": "2026-01-05T15:35:50.130000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "name": "VECTORIZED-PROJECT",
+    "description": "",
+    "settings": {
+      "chunk_size": 500.0,
+      "chunk_overlap": 50.0,
+      "similarity_threshold": 0.7,
+      "max_results": 5.0
+    },
+    "document_count": 0,
+    "is_active": true,
+    "color": "purple",
+    "tags": [],
+    "id": "695bda55048d089f6d11f3bd",
+    "created_date": "2026-01-05T15:35:49.110000",
+    "updated_date": "2026-01-05T15:35:49.110000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  }
+]

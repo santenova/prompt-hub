@@ -1,0 +1,32 @@
+[
+  {
+    "user_email": "tokenfreeai@gmail.com",
+    "label": "client_two",
+    "api_key": "pk_6xuid9z1otk",
+    "api_key_masked": "pk_6xuid9z...1otk",
+    "is_active": true,
+    "last_used": "2026-02-07T14:40:33.405Z",
+    "usage_count": 23.0,
+    "id": "69725bf7d4eed05be48f7d6e",
+    "created_date": "2026-01-22T17:18:47.714000",
+    "updated_date": "2026-02-07T14:40:33.696000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "user_email": "tokenfreeai@gmail.com",
+    "label": "client_one",
+    "api_key": "pk_58egchw9fwv",
+    "api_key_masked": "pk_58egchw...9fwv",
+    "is_active": true,
+    "last_used": null,
+    "usage_count": 0,
+    "id": "69725be7a9f1c90fe061d664",
+    "created_date": "2026-01-22T17:18:31.524000",
+    "updated_date": "2026-01-22T17:18:31.524000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  }
+]

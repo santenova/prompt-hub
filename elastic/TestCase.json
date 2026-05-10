@@ -1,0 +1,38 @@
+[
+  {
+    "prompt_id": "sample_prompt_2",
+    "name": "Test Creative Variations",
+    "input": "Generate product description for eco-friendly water bottle",
+    "expected_output": "Creative, engaging product description highlighting sustainability",
+    "actual_output": null,
+    "status": "pending",
+    "last_run_date": null,
+    "success_rate": 0.0,
+    "run_count": 0.0,
+    "notes": "New test case to evaluate",
+    "id": "6918bb6a3565230809c5edd2",
+    "created_date": "2025-11-15T17:42:02.514000",
+    "updated_date": "2025-11-15T17:42:02.514000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  },
+  {
+    "prompt_id": "sample_prompt_1",
+    "name": "Test Professional Tone",
+    "input": "Write a blog post about AI trends",
+    "expected_output": "A professional, well-structured blog post discussing current AI trends",
+    "actual_output": null,
+    "status": "passed",
+    "last_run_date": null,
+    "success_rate": 85.0,
+    "run_count": 5.0,
+    "notes": "Consistently produces high-quality output",
+    "id": "6918bb6a3565230809c5edd1",
+    "created_date": "2025-11-15T17:42:02.514000",
+    "updated_date": "2025-11-15T17:42:02.514000",
+    "created_by_id": "6901f73a3178f5670b5f2459",
+    "created_by": "tokenfreeai@gmail.com",
+    "is_sample": false
+  }
+]
