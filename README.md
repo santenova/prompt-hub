@@ -41,14 +41,14 @@ Prompt Hub is your AI-powered workspace for creating, managing, and organizing p
 
 
 ## Getting Started
-
+``
  git clone https://github.com/your-repo/prompt-hub.git
  cd prompt-hub;
  npm install; 
  npm run build; 
  npm run dev
 
-
+``
 ## elastic 
 
     open http://localhost:5173/test
