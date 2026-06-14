@@ -1,0 +1,186 @@
+{
+  "name": "Template",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the template"
+    },
+    "content": {
+      "type": "string",
+      "description": "Template content with placeholders"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of what this template does"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Writing",
+        "Coding",
+        "Business",
+        "Creative",
+        "Marketing",
+        "Research",
+        "Education",
+        "Relations",
+        "Personas",
+        "Health & Wellness",
+        "Finance & Investment",
+        "Legal",
+        "Productivity",
+        "Sales",
+        "Design",
+        "Gaming",
+        "Food & Cooking",
+        "Travel & Lifestyle",
+        "Career Development",
+        "Personal Development",
+        "Data & Analytics",
+        "AI & Machine Learning",
+        "Social Media",
+        "E-commerce",
+        "Other"
+      ],
+      "default": "Other",
+      "description": "Category of the template"
+    },
+    "subcategory": {
+      "type": "string",
+      "description": "Subcategory for more specific classification"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags for the template"
+    },
+    "folder": {
+      "type": "string",
+      "description": "Folder name for organization",
+      "default": "Uncategorized"
+    },
+    "placeholders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "default": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Placeholders in the template (e.g., {topic}, {tone})"
+    },
+    "use_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of times the template has been used"
+    },
+    "is_favorite": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the template is marked as favorite"
+    },
+    "is_public": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the template is shared publicly"
+    },
+    "visibility": {
+      "type": "string",
+      "enum": [
+        "private",
+        "public",
+        "shared"
+      ],
+      "default": "private",
+      "description": "Template visibility level"
+    },
+    "shared_with": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Email addresses of users this template is shared with",
+      "default": []
+    },
+    "rating": {
+      "type": "number",
+      "default": 0,
+      "description": "Average rating (1-5 stars)"
+    },
+    "rating_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of ratings received"
+    },
+    "user_ratings": {
+      "type": "object",
+      "description": "Object storing individual user ratings with email as key",
+      "default": {}
+    },
+    "downloads": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of times template was copied/downloaded"
+    },
+    "version": {
+      "type": "number",
+      "default": 1,
+      "description": "Current version number"
+    },
+    "version_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "subcategory": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "saved_date": {
+            "type": "string"
+          },
+          "change_notes": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "History of all versions",
+      "default": []
+    }
+  },
+  "required": [
+    "title",
+    "content"
+  ]
+}
