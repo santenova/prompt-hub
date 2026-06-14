@@ -11,30 +11,6 @@ import { createPageUrl } from "../../utils";
 
 // Core entities for search - focus on most used
 const ENTITY_CONFIG = {
-  Template: {
-    icon: FileText, bgColor: 'bg-purple-100', textColor: 'text-purple-700', label: 'Prompts',
-    searchFields: ['title', 'content', 'description', 'category', 'tags'],
-    getLink: (item) => `${createPageUrl('Templates')}?highlight=${item.id}&search=${encodeURIComponent(item.title || item.name || '')}`,
-    getSubtitle: (item) => item.category || 'Uncategorized'
-  },
-  Persona: {
-    icon: Users, bgColor: 'bg-indigo-100', textColor: 'text-indigo-700', label: 'Personas',
-    searchFields: ['name', 'description', 'instructions', 'category', 'tags'],
-    getLink: (item) => `${createPageUrl('PersonasLibrary')}?highlight=${item.id}&search=${encodeURIComponent(item.title || item.name || '')}`,
-    getSubtitle: (item) => item.category || 'Custom'
-  },
-  AgentPackage: {
-    icon: Package, bgColor: 'bg-orange-100', textColor: 'text-orange-700', label: 'Agent Packages',
-    searchFields: ['name', 'description', 'category', 'tags'],
-    getLink: (item) => `${createPageUrl('AgentMarketplace')}?highlight=${item.id}&search=${encodeURIComponent(item.title || item.name || '')}`,
-    getSubtitle: (item) => item.category || 'General'
-  },
-  VoiceChat: {
-    icon: MessageSquare, bgColor: 'bg-blue-100', textColor: 'text-blue-700', label: 'Voice Chats',
-    searchFields: ['name', 'messages'],
-    getLink: (item) => createPageUrl('VoiceToPrompt'),
-    getSubtitle: (item) => `${item.messages?.length || 0} messages • ${new Date(item.updatedAt).toLocaleDateString()}`
-  }
 };
 
 const itemMatchesQuery = (item, query, searchFields) => {
@@ -190,9 +166,6 @@ export default function GlobalSearch({ trigger, open, onOpenChange }) {
             <div className="flex gap-2 px-3 pb-2">
               {[
                 { value: 'all', label: 'All' },
-                { value: 'Template', label: 'Prompts' },
-                { value: 'Persona', label: 'Personas' },
-                { value: 'VoiceChat', label: 'Voice Chats' }
               ].map(filter => (
                 <button
                   key={filter.value}
@@ -273,15 +246,7 @@ export default function GlobalSearch({ trigger, open, onOpenChange }) {
             {!query.trim() && recentSearches.length === 0 && (
               <div className="p-2">
                 <div className="px-2 py-1 text-xs font-medium text-muted-foreground">Quick Actions</div>
-                <div onClick={() => { setDialogOpen(false); navigate(createPageUrl('Templates')); }} className="flex items-center gap-2 py-2 px-2 rounded-md hover:bg-accent cursor-pointer">
-                  <FileText className="h-4 w-4" />Prompts
-                </div>
-                <div onClick={() => { setDialogOpen(false); navigate(createPageUrl('PersonasLibrary')); }} className="flex items-center gap-2 py-2 px-2 rounded-md hover:bg-accent cursor-pointer">
-                  <Users className="h-4 w-4" />Personas
-                </div>
-                <div onClick={() => { setDialogOpen(false); navigate(createPageUrl('VoiceToPrompt')); }} className="flex items-center gap-2 py-2 px-2 rounded-md hover:bg-accent cursor-pointer">
-                  <MessageSquare className="h-4 w-4" />Voice Chat
-                </div>
+       
               </div>
             )}
           </div>
