@@ -20,11 +20,12 @@ import {
   Users,
   Plus,
   Trash2,
-  Box
+  Box,
+  MessageSquare
 } from "lucide-react";
 
 const ES_CONFIG_KEY = 'elasticsearch_config';
-const ES_CONFIG_VERSION = 5; // bump to force-reset stored config
+const ES_CONFIG_VERSION = 6; // bump to force-reset stored config
 
 
 
@@ -32,6 +33,7 @@ const ES_CONFIG_VERSION = 5; // bump to force-reset stored config
 const ALL_ENTITIES = [
   { name: 'Persona', defaultIndex: 'prompt-hub-persona', icon: Users },
   { name: 'Template', defaultIndex: 'prompt-hub-template', icon: FileText },
+  { name: 'ChatSession', defaultIndex: 'prompt-hub-session', icon: MessageSquare },
 ];
 
 const getDefaultIndices = () => {
@@ -42,7 +44,7 @@ const getDefaultIndices = () => {
   return indices;
 };
 
-const getElasticsearchConfig = () => {
+export const getElasticsearchConfig = () => {
   const allEntityNames = ALL_ENTITIES.map(e => e.name);
   const fresh = {
     endpoint: 'http://localhost:5174/db',
@@ -456,7 +458,7 @@ export default function ElasticsearchDataSource() {
       title: enabled ? "Elasticsearch Enabled" : "Elasticsearch Disabled",
       description: enabled 
         ? "Selected entities will now load from Elasticsearch" 
-        : "Data will load from the default client database"
+        : "Data will load from the default Base44 database"
     });
   };
 

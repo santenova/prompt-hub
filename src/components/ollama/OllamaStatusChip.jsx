@@ -16,10 +16,10 @@ export default function OllamaStatusChip({ className = '' }) {
     setStatus('checking');
     try {
       const base = getOllamaEndpoint();
-      const res = await fetch(`${base}/api/tags`, { signal: AbortSignal.timeout(4000) });
+      const res = await fetch(`${base}/v1/models`, { signal: AbortSignal.timeout(4000) });
       if (!res.ok) throw new Error('non-ok');
       const data = await res.json();
-      setModelCount((data.models || []).length);
+      setModelCount((data.data || []).length);
       setStatus('ok');
     } catch {
       setStatus('error');

@@ -15,6 +15,34 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { client } from "@/apis/client";
+
+const getOllamaEndpoint = () => {
+  try {
+    const stored = localStorage.getItem('ollama_endpoints');
+    if (stored) {
+      const eps = JSON.parse(stored);
+      if (Array.isArray(eps) && eps.length > 0) return eps[0];
+    }
+  } catch {}
+  return 'https://christy-ramentaceous-verbatim.ngrok-free.dev';
+};
+
+const getDefaultModel = () => {
+  try { return localStorage.getItem('ollama_default_model') || 'llama3.2'; } catch { return 'llama3.2'; }
+};
+
+const ollamaChat = async (messages) => {
+  const ep = getOllamaEndpoint();
+  const model = getDefaultModel();
+  const res = await fetch(`${ep}/v1/chat/completions`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ model, messages, stream: false })
+  });
+  if (!res.ok) throw new Error(`Server error: ${res.status}`);
+  const data = await res.json();
+  return data?.choices?.[0]?.message?.content || '';
+};
 import { Loader2, Sparkles, Wand2, X, CheckCircle2 } from "lucide-react";
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useToast } from "@/components/ui/use-toast";
@@ -55,7 +83,10 @@ export default function CombinePersonasModal({ open, onOpenChange, selectedPerso
 
         let finalName;
         try {
-          const suggestedName = await client.integrations.Core.InvokeLLMwithLogging({ prompt: namePrompt });
+          const suggestedName = await ollamaChat([
+            { role: 'system', content: 'Return ONLY the persona name as a plain string, no quotes, no explanation.' },
+            { role: 'user', content: namePrompt }
+          ]);
           finalName = suggestedName.trim().replace(/"/g, '');
           setNewName(finalName);
         } catch (error) {
@@ -100,43 +131,12 @@ export default function CombinePersonasModal({ open, onOpenChange, selectedPerso
             `;
             
             try {
-              const result = await client.integrations.Core.InvokeLLM({
-                prompt: personaDetailsPrompt,
-                response_json_schema: {
-                  type: 'object',
-                  properties: {
-                    description: { type: 'string' },
-                    instructions: { type: 'string' },
-                    icon: { type: 'string' },
-                    color: { type: 'string' },
-                    tone: { type: 'string', enum: ["Professional", "Friendly", "Formal", "Casual", "Enthusiastic", "Direct", "Empathetic"] },
-                    expertise_areas: { type: 'array', items: { type: 'string' } },
-                    example_prompts: { type: 'array', items: { type: 'string' } },
-                    tags: { type: 'array', items: { type: 'string' } },
-                    voice_profile: {
-                        type: "object",
-                        properties: {
-                          vocabulary: { type: "array", items: { type: "string" } },
-                          sentence_patterns: { type: "array", items: { type: "string" } },
-                          style_traits: { type: "array", items: { type: "string" } },
-                          example_phrases: { type: "array", items: { type: "string" } },
-                          tone_recommendation: {
-                            type: "object",
-                            properties: {
-                              primary_tone: { type: "string" },
-                              modifiers: { type: "array", items: { type: "string" } },
-                              adjustment_rules: { type: "array", items: { type: "string" } }
-                            }
-                          },
-                          dos: { type: "array", items: { type: "string" } },
-                          donts: { type: "array", items: { type: "string" } },
-                          personality_summary: { type: "string" }
-                        },
-                    }
-                  },
-                  required: ['description', 'instructions', 'icon', 'color', 'tone', 'expertise_areas', 'example_prompts', 'tags', 'voice_profile']
-                },
-              });
+              const raw = await ollamaChat([
+                { role: 'system', content: 'You are an expert at creating AI personas. Return ONLY valid JSON — no markdown, no explanation.' },
+                { role: 'user', content: personaDetailsPrompt + '\n\nReturn ONLY a JSON object with fields: description, instructions, icon, color, tone, expertise_areas, example_prompts, tags, voice_profile.' }
+              ]);
+              const jsonMatch = raw.match(/\{[\s\S]*\}/);
+              const result = JSON.parse(jsonMatch ? jsonMatch[0] : raw);
               
               // Merge expertise_areas from all source personas + LLM output
               const sourceExpertise = Array.from(

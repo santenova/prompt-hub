@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { client } from '@/apis/client';
+import { client } from "@/apis/client";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -162,7 +162,7 @@ export default function PersonasLibrary() {
           const esData = await getEntity('Persona');
           if (esData && Array.isArray(esData)) return esData;
         }
-        const data = await client.entities.Persona.list('-use_count');
+        const data = await base44.entities.Persona.list('-use_count');
         return Array.isArray(data) ? data : [];
       } catch (error) {
         console.error('Error fetching personas:', error);
@@ -202,7 +202,7 @@ export default function PersonasLibrary() {
         const esResult = await createEntity('Persona', data);
         if (esResult) return esResult;
       }
-      return client.entities.Persona.create(data);
+      return base44.entities.Persona.create(data);
     },
     onSuccess: () => {
       queryClient.invalidateQueries(['personas']);
@@ -220,7 +220,7 @@ export default function PersonasLibrary() {
         const esResult = await updateEntity('Persona', id, data);
         if (esResult) return esResult;
       }
-      return client.entities.Persona.update(id, data);
+      return base44.entities.Persona.update(id, data);
     },
     onSuccess: () => {
       queryClient.invalidateQueries(['personas']);
@@ -233,7 +233,7 @@ export default function PersonasLibrary() {
   });
 
   const deletePersonaMutation = useMutation({
-    mutationFn: (id) => client.entities.Persona.delete(id),
+    mutationFn: (id) => base44.entities.Persona.delete(id),
     onSuccess: () => {
       queryClient.invalidateQueries(['personas']);
     },
@@ -749,3 +749,5 @@ export default function PersonasLibrary() {
     </div>
   );
 }
+
+

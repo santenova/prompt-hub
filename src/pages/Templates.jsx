@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
-import { client } from '@/apis/client';
+import { client } from "@/apis/client";;
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { handleRateLimitError } from "../components/utils/rateLimitHandler";
 import { Button } from "@/components/ui/button";

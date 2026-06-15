@@ -51,6 +51,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { client } from "@/apis/client";
 import { Checkbox } from "@/components/ui/checkbox";
+import PersonaChatSession from './PersonaChatSession';
 
 export default function PersonaCard({ persona, onEdit, onDelete, onToggleFavorite, onUpdate, currentUserEmail, currentUser, onSelect, isSelected }) {
   const [showDetails, setShowDetails] = useState(false);
@@ -58,6 +59,11 @@ export default function PersonaCard({ persona, onEdit, onDelete, onToggleFavorit
   const [isGeneratingExamples, setIsGeneratingExamples] = useState(false);
   const [generationError, setGenerationError] = useState(null);
   const [showShareModal, setShowShareModal] = useState(false);
+  const [showTalkPicker, setShowTalkPicker] = useState(false);
+  const [talkQuestions, setTalkQuestions] = useState([]);
+  const [isGeneratingQuestions, setIsGeneratingQuestions] = useState(false);
+  const [showChatSession, setShowChatSession] = useState(false);
+  const [chatInitialQuestion, setChatInitialQuestion] = useState('');
   const [showTestDialog, setShowTestDialog] = useState(false);
   const [testResponse, setTestResponse] = useState('');
   const [isTesting, setIsTesting] = useState(false);
@@ -191,7 +197,7 @@ export default function PersonaCard({ persona, onEdit, onDelete, onToggleFavorit
     const status = {};
     for (const endpoint of endpoints) {
       try {
-        const res = await fetch(`${endpoint}/api/tags`);
+        const res = await fetch(`${endpoint}/v1/models`);
         status[endpoint] = res.ok ? 'online' : 'offline';
       } catch { status[endpoint] = 'offline'; }
     }
@@ -203,9 +209,9 @@ export default function PersonaCard({ persona, onEdit, onDelete, onToggleFavorit
     if (!ep) return;
     setLoadingModels(true);
     try {
-      const res = await fetch(`${ep}/api/tags`);
+      const res = await fetch(`${ep}/v1/models`);
       const data = await res.json();
-      setAvailableModels((data.models || []).map(m => ({ name: m.name })));
+      setAvailableModels((data.data || []).map(m => ({ name: m.id })));
     } catch (error) {
       console.error('Error fetching models:', error);
     } finally { setLoadingModels(false); }
@@ -265,13 +271,14 @@ export default function PersonaCard({ persona, onEdit, onDelete, onToggleFavorit
     const modelToUse = selectedModel || getDefaultModel();
 
     try {
-      const chatRes = await fetch(`${endpoint}/api/chat`, {
+      const chatRes = await fetch(`${endpoint}/v1/chat/completions`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ model: modelToUse, messages: [{ role: "system", content: systemPrompt }, { role: "user", content: userMessage }], stream: false }),
       });
+      if (!chatRes.ok) throw new Error(`Server error: ${chatRes.status}`);
       const chatData = await chatRes.json();
-      const fullResponse = chatData?.message?.content || 'No response received';
+      const fullResponse = chatData?.choices?.[0]?.message?.content || 'No response received';
       setTestResponse(fullResponse);
       saveTestToHistory(userMessage, fullResponse);
       setCustomTestMessage('');
@@ -280,6 +287,58 @@ export default function PersonaCard({ persona, onEdit, onDelete, onToggleFavorit
       setTestError(error.message || 'Failed to connect to Ollama. Make sure it is running.');
     } finally {
       setIsTesting(false);
+    }
+  };
+
+  const handleOpenTalk = async () => {
+    setShowTalkPicker(true);
+    setTalkQuestions([]);
+    setIsGeneratingQuestions(true);
+    const ep = selectedEndpoint || ollamaEndpoints[0];
+    try {
+      const res = await fetch(`${ep}/v1/chat/completions`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: selectedModel || getDefaultModel(),
+          messages: [
+            {
+              role: 'system',
+              content: 'You are an expert at testing AI personas. Return ONLY valid JSON with a "questions" array of exactly 10 strings — no markdown, no explanation.'
+            },
+            {
+              role: 'user',
+              content: `Based on the following persona, generate exactly 10 diverse test questions that challenge and reveal its capabilities.
+
+Persona Name: ${persona.name}
+Description: ${persona.description}
+Instructions: ${persona.instructions || 'N/A'}
+Expertise Areas: ${persona.expertise_areas?.join(', ') || 'General'}
+Tone: ${persona.tone}
+
+Generate 10 specific, varied questions that:
+1. Test the persona's core expertise
+2. Cover different difficulty levels
+3. Are directly aligned with the instructions
+4. Would produce distinct, revealing answers
+
+Return ONLY this JSON: {"questions": ["question1", "question2", ..., "question10"]}`
+            }
+          ],
+          stream: false
+        })
+      });
+      if (!res.ok) throw new Error(`Server error: ${res.status}`);
+      const data = await res.json();
+      const text = data?.choices?.[0]?.message?.content || '';
+      // Extract JSON even if model wraps it in markdown
+      const jsonMatch = text.match(/\{[\s\S]*\}/);
+      const parsed = JSON.parse(jsonMatch ? jsonMatch[0] : text);
+      setTalkQuestions(parsed.questions || []);
+    } catch (error) {
+      setTalkQuestions([]);
+    } finally {
+      setIsGeneratingQuestions(false);
     }
   };
 
@@ -292,10 +351,21 @@ export default function PersonaCard({ persona, onEdit, onDelete, onToggleFavorit
   const handleGenerateExamples = async () => {
     setIsGeneratingExamples(true);
     setGenerationError(null);
-
+    const ep = selectedEndpoint || ollamaEndpoints[0];
     try {
-      const result = await client.integrations.Core.InvokeLLM({
-        prompt: `You are an expert AI persona designer. Generate 5 diverse, high-quality example prompts for the following persona.
+      const res = await fetch(`${ep}/v1/chat/completions`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: selectedModel || getDefaultModel(),
+          messages: [
+            {
+              role: 'system',
+              content: 'You are an expert AI persona designer. Return ONLY valid JSON with an "examples" array of exactly 5 strings — no markdown, no explanation.'
+            },
+            {
+              role: 'user',
+              content: `Generate 5 diverse, high-quality example prompts for the following persona.
 
 Persona Name: ${persona.name}
 Description: ${persona.description}
@@ -304,36 +374,21 @@ Tone: ${persona.tone}
 Expertise Areas: ${persona.expertise_areas?.join(', ') || 'General'}
 Instructions: ${persona.instructions || 'N/A'}
 
-Generate 5 example prompts that:
-1. Showcase the persona's expertise and unique value
-2. Cover different use cases and scenarios
-3. Are specific, actionable, and realistic
-4. Demonstrate the persona's tone and communication style
-5. Are suitable for use with an AI Content Generator
+Each prompt should showcase the persona's expertise, be specific and actionable.
 
-Return ONLY an array of 5 example prompt strings, each should be a complete sentence or question.`,
-        response_json_schema: {
-          type: "object",
-          properties: {
-            examples: {
-              type: "array",
-              items: { type: "string" },
-              minItems: 5,
-              maxItems: 5,
-              description: "Array of 5 example prompts"
+Return ONLY this JSON: {"examples": ["prompt1", "prompt2", "prompt3", "prompt4", "prompt5"]}`
             }
-          },
-          required: ["examples"]
-        }
+          ],
+          stream: false
+        })
       });
-
-      if (result.examples && result.examples.length > 0) {
-        // Update persona with generated examples
-        if (onUpdate) {
-          await onUpdate(persona.id, {
-            example_prompts: result.examples
-          });
-        }
+      if (!res.ok) throw new Error(`Server error: ${res.status}`);
+      const data = await res.json();
+      const text = data?.choices?.[0]?.message?.content || '';
+      const jsonMatch = text.match(/\{[\s\S]*\}/);
+      const parsed = JSON.parse(jsonMatch ? jsonMatch[0] : text);
+      if (parsed.examples?.length > 0 && onUpdate) {
+        await onUpdate(persona.id, { example_prompts: parsed.examples });
       }
     } catch (error) {
       console.error('Error generating examples:', error);
@@ -472,6 +527,14 @@ Return ONLY an array of 5 example prompt strings, each should be a complete sent
           <CardContent className="pt-0 pb-4">
             {/* Compact Action Buttons */}
             <div className="flex items-center gap-2">
+              <Button
+                onClick={handleOpenTalk}
+                className="flex-1 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600"
+                size="sm"
+              >
+                <MessageSquare className="w-4 h-4 mr-2" />
+                Talk
+              </Button>
               <Button
                 onClick={() => setShowDetails(true)}
                 className="flex-1 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
@@ -993,6 +1056,104 @@ Return ONLY an array of 5 example prompt strings, each should be a complete sent
       </Dialog>
 
 
+
+      {/* Talk Question Picker Dialog */}
+      <Dialog open={showTalkPicker} onOpenChange={setShowTalkPicker}>
+        <DialogContent className="max-w-lg max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <div className="flex items-center gap-3 mb-1">
+              <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${persona.color} flex items-center justify-center text-2xl flex-shrink-0`}>
+                {persona.icon}
+              </div>
+              <div>
+                <DialogTitle className="text-lg">{persona.name}</DialogTitle>
+                <p className="text-sm text-gray-500">Pick a question or write your own</p>
+              </div>
+            </div>
+          </DialogHeader>
+
+          <div className="space-y-3">
+            {isGeneratingQuestions ? (
+              <div className="flex flex-col items-center justify-center py-10 gap-3 text-gray-500">
+                <Loader2 className="w-8 h-8 animate-spin text-emerald-500" />
+                <p className="text-sm">Generating test questions from persona instructions...</p>
+              </div>
+            ) : talkQuestions.length > 0 ? (
+              <>
+                <p className="text-xs text-gray-500 font-medium uppercase tracking-wide">10 Generated Questions</p>
+                <ol className="space-y-2">
+                  {talkQuestions.map((q, idx) => (
+                    <li key={idx}>
+                      <button
+                        className="w-full text-left flex items-start gap-3 p-3 rounded-lg border border-gray-200 hover:border-emerald-400 hover:bg-emerald-50 transition-colors group"
+                        onClick={() => {
+                          setChatInitialQuestion(q);
+                          setShowTalkPicker(false);
+                          setShowChatSession(true);
+                        }}
+                      >
+                        <span className="w-6 h-6 flex-shrink-0 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                          {idx + 1}
+                        </span>
+                        <span className="text-sm text-gray-700 leading-relaxed">{q}</span>
+                      </button>
+                    </li>
+                  ))}
+                </ol>
+              </>
+            ) : (
+              <p className="text-sm text-gray-400 text-center py-6">Could not generate questions. You can still open the chat below.</p>
+            )}
+
+            <div className="flex gap-2 pt-2 border-t">
+              <Button
+                variant="outline"
+                onClick={() => setShowTalkPicker(false)}
+              >
+                Cancel
+              </Button>
+              {talkQuestions.length > 0 && (
+                <Button
+                  variant="outline"
+                  className="flex-1 border-emerald-300 text-emerald-700 hover:bg-emerald-50"
+                  onClick={() => {
+                    setChatInitialQuestion('');
+                    setShowTalkPicker(false);
+                    setShowChatSession(true);
+                  }}
+                >
+                  <Send className="w-4 h-4 mr-2" />
+                  Send All to Session
+                </Button>
+              )}
+              <Button
+                className="flex-1 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600"
+                onClick={() => {
+                  setCustomTestMessage('');
+                  setShowTalkPicker(false);
+                  setShowTestDialog(true);
+                  fetchAvailableModels();
+                  checkEndpointStatus(ollamaEndpoints);
+                }}
+              >
+                <MessageSquare className="w-4 h-4 mr-2" />
+                Open Chat
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* OpenAI-style Chat Session */}
+      <PersonaChatSession
+        open={showChatSession}
+        onOpenChange={setShowChatSession}
+        persona={persona}
+        initialQuestion={chatInitialQuestion}
+        allQuestions={talkQuestions.length > 0 ? talkQuestions : undefined}
+        endpoint={selectedEndpoint || ollamaEndpoints[0]}
+        model={selectedModel}
+      />
 
       {/* Ollama Test Dialog */}
       <Dialog open={showTestDialog} onOpenChange={setShowTestDialog}>

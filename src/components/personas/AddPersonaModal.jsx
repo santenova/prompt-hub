@@ -17,7 +17,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Plus, X, Sparkles } from "lucide-react";
+import { Plus, X, Sparkles, FlaskConical } from "lucide-react";
+import PersonaTestQuestions from './PersonaTestQuestions';
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -38,7 +39,8 @@ export default function AddPersonaModal({ open, onOpenChange, persona, onSave, i
     example_prompts: [],
     tags: [],
     is_custom: true,
-    voice_profile: null
+    voice_profile: null,
+    test_questions: []
   });
 
   const [expertiseInput, setExpertiseInput] = React.useState('');
@@ -62,7 +64,8 @@ export default function AddPersonaModal({ open, onOpenChange, persona, onSave, i
           example_prompts: persona.example_prompts || [],
           tags: persona.tags || [],
           is_custom: persona.is_custom !== false,
-          voice_profile: persona.voice_profile || null
+          voice_profile: persona.voice_profile || null,
+          test_questions: persona.test_questions || []
         });
       } else {
         setFormData({
@@ -77,7 +80,8 @@ export default function AddPersonaModal({ open, onOpenChange, persona, onSave, i
           example_prompts: [],
           tags: [],
           is_custom: true,
-          voice_profile: null
+          voice_profile: null,
+          test_questions: []
         });
       }
       setAiTab('form');
@@ -211,11 +215,15 @@ export default function AddPersonaModal({ open, onOpenChange, persona, onSave, i
           {/* Left Column - Form */}
           <div className="lg:col-span-2">
             <Tabs value={aiTab} onValueChange={setAiTab}>
-              <TabsList className="grid w-full grid-cols-2">
+              <TabsList className="grid w-full grid-cols-3">
                 <TabsTrigger value="form">Persona Details</TabsTrigger>
                 <TabsTrigger value="ai-tags">
                   <Sparkles className="w-4 h-4 mr-2" />
                   AI Tags
+                </TabsTrigger>
+                <TabsTrigger value="test-questions">
+                  <FlaskConical className="w-4 h-4 mr-2" />
+                  Test Questions
                 </TabsTrigger>
               </TabsList>
 
@@ -422,6 +430,40 @@ export default function AddPersonaModal({ open, onOpenChange, persona, onSave, i
 
               <TabsContent value="ai-tags" className="mt-4">
                 <div className="text-sm text-gray-500 p-4">AI tag suggestions unavailable.</div>
+              </TabsContent>
+
+              <TabsContent value="test-questions" className="mt-4">
+                <PersonaTestQuestions
+                  formData={formData}
+                  onQuestionsGenerated={(questions) =>
+                    setFormData(prev => ({ ...prev, test_questions: questions }))
+                  }
+                />
+                {formData.test_questions?.length > 0 && (
+                  <p className="text-xs text-green-600 mt-3 text-center">
+                    ✓ {formData.test_questions.length} test questions will be saved with this persona
+                  </p>
+                )}
+                <DialogFooter className="mt-4">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={() => onOpenChange(false)}
+                    disabled={isSaving}
+                  >
+                    Cancel
+                  </Button>
+                  <Button
+                    type="button"
+                    onClick={() => {
+                      if (formData.name && formData.description) onSave(formData);
+                    }}
+                    disabled={!formData.name || !formData.description || isSaving}
+                    className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700"
+                  >
+                    {isSaving ? 'Saving...' : 'Save Persona'}
+                  </Button>
+                </DialogFooter>
               </TabsContent>
             </Tabs>
           </div>
